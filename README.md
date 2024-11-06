@@ -1,6 +1,6 @@
 # FinalProject File Management System
 
-Student Information
+##Student Information
 
 Jie Cong Zhou Cao
 Fall 2024
