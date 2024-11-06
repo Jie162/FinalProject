@@ -1,8 +1,13 @@
 def create_file():
+  """This line of code the user enter a name to create a file"""
   file_name = input("Enter the name of the file to create:")
 
+
+
+  """content for the file"""
   content = input("Write the content for the file:")
 
+  """Open the file in write mode 'w' and save the content"""
   write open(file_name, 'w') as f:
     f.write(content)
 
