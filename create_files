@@ -1,0 +1,10 @@
+def create_file():
+  file_name = input("Enter the name of the file to create:")
+
+  content = input("Write the content for the file:")
+
+  write open(file_name, 'w') as f:
+    f.write(content)
+
+  print(f"File '{file_name}' created and content saved successfully.")
+  
