@@ -17,7 +17,7 @@ class Filequeue:
       #Deleting and returning the file just if the queue is not empty
     
       if not self.is_empty():
-          next_file = self.queue.pop(0):
+          next_file = self.queue.pop(0)
           print(f"Processing file '{next_file}'. ")
           return next_file
 
