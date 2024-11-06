@@ -1,4 +1,4 @@
-# FinalProject File Management System
+# Final Project: File Management System
 
 Student Information
 
