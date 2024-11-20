@@ -14,18 +14,24 @@ def create_file():
 
   write open(file_name, 'w') as f:
     f.write(content)
-
+  """Show that the file is created and saved the content"""
   print(f"File '{file_name}' created and content saved successfully.")
 
 
 def search_fie():
-    """Search the file by a keyword"""
+    """Ask the user to put the name of the file to search"""
+
     file_name = input("Enter the name of the file to search: ")
+
+  """Ask the user to put a keyword to search the file"""
+
     keyword = input("Enter the keyword or phrase of the file to search: ")
 
     try:
       with open(file_name, 'r') as f:
         content = f.read
+
+
       if keyword in content:
         print(f"'{keyword}' found in '{file_name}'.")
       else:
