@@ -1,6 +1,5 @@
-class Createfiles:
 
-    def create_file():
+def create_file():
 
         """This line of code the user enter a name to create a file"""
 

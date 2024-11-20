@@ -1,6 +1,6 @@
 # This code is going for queues
 
-class Filequeue:
+class FileQueue:
     def __init__(self):
 
         self.queue = []
