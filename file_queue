@@ -12,6 +12,17 @@ class Filequeue:
         print(f"The file '{file_name}' has been added to the queue."
 
 
+"""Code to show the queue of the files"""
+
+    def show_queue(file_queue):
+        if file_queue.is empty():
+            print("The queue is empty.")
+        else:
+            print("Files in queue:")
+        for files in file_queue.queue:  
+            print(f" -{file}")
+
+
     def dequeue(self):
 
       #Deleting and returning the file just if the queue is not empty
