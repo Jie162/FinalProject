@@ -6,30 +6,30 @@ class Filequeue:
 
     def enqueue(self, file_name):
 
-      # This code is to add a file to the queue
-      
+    # This code is to add a file to the queue
+
         self.queue.append(file_name)
-        print(f"The file '{file_name}' has been added to the queue."
+        print(f"The file '{file_name}' has been added to the queue.")
 
 
     def dequeue(self):
 
-      #Deleting and returning the file just if the queue is not empty
+    #Deleting and returning the file just if the queue is not empty
     
-      if not self.is_empty():
-          next_file = self.queue.pop(0)
-          print(f"Processing file '{next_file}'. ")
-          return next_file
+        if not self.is_empty():
+            next_file = self.queue.pop(0)
+            print(f"Processing file '{next_file}'. ")
+            return next_file
 
-      else:
-          print("No files in queue.")
-          return None
+        else:
+            print("No files in queue.")
+            return None
 
     def is_empty(self):
 
-          # I need to know if my queue is empty or has a file in queue
+        # I need to know if my queue is empty or has a file in queue
 
-          return len(self.queue) == 0 
+        return len(self.queue) == 0 
 
 
-    ####### I dont know this is correct I need to fix it more
+        ####### I dont know this is correct I need to fix it more
