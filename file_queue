@@ -15,7 +15,7 @@ class Filequeue:
 """Code to show the queue of the files"""
 
     def show_queue(file_queue):
-        if file_queue.is empty():
+        if file_queue.is_empty():
             print("The queue is empty.")
         else:
             print("Files in queue:")
