@@ -1,5 +1,5 @@
-from create_files import create_file, read_file, search_file, delete_file, rename_file
-from file_queue import FileQueue
+from create_files.py import create_file, read_file, search_file, delete_file, rename_file
+from file_queue.py import FileQueue
 
 def main():
 
