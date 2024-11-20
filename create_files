@@ -4,8 +4,6 @@ def create_file():
 
 file_name = input("Enter the name of the file to create:")
 
-
-
 """content for the file"""
 
 content = input("Write the content for the file:")
@@ -17,6 +15,30 @@ with open(file_name, 'w') as f:
 
 print(f"File '{file_name}' created and content saved successfully.")
 
+
+def search_file():
+
+    """Search for a keyword or phrase in a file."""
+
+    file_name = input("Enter the name of the file to search: ")
+
+    keyword = input("Enter the keyword or phrase to search: ")
+
+    try:
+
+        """Open the file in read mode and search for the keyword"""
+
+        with open(file_name, 'r') as f:
+            content = f.read()
+        if keyword in content:
+            print(f"'{keyword}' found in '{file_name}'.")
+        else:
+            print(f"'{keyword}' not found in '{file_name}'.")
+
+    except FileNotFoundError:
+        print(f"File '{file_name}' not found.")
+    except Exception as e:
+        print(f"An error occurred: {e}")
 
 
 def read_file():
@@ -60,11 +82,22 @@ def rename_file():
     new_name = input("Enter the new name for the file: ")
     
     try:
-        with open(old_name, 'r') as f:
-            content = f.read()
-        with open(new_name, 'w') as f:
-            f.write(content)
+
+        """read the content of old file"""
+
+        with open(old_name, 'r') as old_file:
+            content = old_file.read()
+
+        """write the content to the new file"""    
+
+        with open(new_name, 'w') as new_file:
+            new_file.write(content)
+
+        """delete the old file"""
+
+        open(old_name, 'w').close()
         print(f"File renamed from '{old_name}' to '{new_name}'.")
+
     except FileNotFoundError:
         print(f"File '{old_name}' not found.")
     except Exception as e:
