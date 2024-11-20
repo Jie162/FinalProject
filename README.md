@@ -27,7 +27,7 @@ The program includes the following options:
 
 5. List files: List all the files in the current directory.
 
-6. Filter files: Filter files.
+6. Search files: Search files.
 
 7. Add a file to the queue: Add a file to a processing queue.
 
