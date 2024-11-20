@@ -2,45 +2,52 @@
 
 class Filequeue:
     def __init__(self):
+
         self.queue = []
 
     def enqueue(self, file_name):
 
-      # This code is to add a file to the queue
-      
+        """Add a file to the queue."""
+
         self.queue.append(file_name)
-        print(f"The file '{file_name}' has been added to the queue."
 
-
-"""Code to show the queue of the files"""
-
-    def show_queue(file_queue):
-        if file_queue.is_empty():
-            print("The queue is empty.")
-        else:
-            print("Files in queue:")
-        for files in file_queue.queue:  
-            print(f" -{file}")
-
+        print(f"The file '{file_name}' has been added to the queue.")
 
     def dequeue(self):
 
-      #Deleting and returning the file just if the queue is not empty
-    
-      if not self.is_empty():
-          next_file = self.queue.pop(0)
-          print(f"Processing file '{next_file}'. ")
-          return next_file
+        """Remove and return the first file in the queue."""
 
-      else:
-          print("No files in queue.")
-          return None
+        if not self.is_empty():
+
+            next_file = self.queue.pop(0)
+
+            print(f"Processing file '{next_file}'.")
+
+            return next_file
+
+        else:
+            print("No files in queue.")
+
+            return None
+
+    def show_queue(self):
+
+        """Display all files in the queue."""
+
+        if self.is_empty():
+
+            print("The queue is empty.")
+
+        else:
+
+            print("Files in queue:")
+
+            for file_name in self.queue:
+
+                print(f" - {file_name}")
 
     def is_empty(self):
 
-          # I need to know if my queue is empty or has a file in queue
+        """Check if the queue is empty."""
 
-          return len(self.queue) == 0 
-
-
-    ####### I dont know this is correct I need to fix it more
+        return len(self.queue) == 0
